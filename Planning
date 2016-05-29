@@ -5,6 +5,8 @@ Functionality
         ~Sub-Clients
     -Session Tracking + Note Taking
         ~Scheduling?
+    -Track Related Expenses
+        ~Linked to Clients?
 
 Execution
     -Main Page
@@ -17,11 +19,13 @@ Execution
             •Add mileage entries by date
             •Summarize mileage
                 →annually at a minimum
+            •Link to Clients?
 
         ~Entry Possibilities
             •Single Entry Style Form
             •Continuous Entry Style Form
             •Datasheet Style Form
+            •Imbedded in Sessions
 
         ~Summary Possibilities
             •Unrestricted query of dates
@@ -45,4 +49,40 @@ Execution
 
         ~Entry
             •Single Form View
-            •
+                →Imbedded with a datasheet form for Session linking
+            •Two Different forms?
+                →Manual Entry
+                →Session Linked
+            •CardLayout?
+                →Dropdown determines Manual v Session
+            •Combo Form
+                →Contains fields for Manual additions and for session linking
+
+    -Clients/Accounts
+        ~Must be able to:
+            •Add Sub-Clients when needed
+                →Sub-Clients should have a name, an address?, and a phone number
+            •Operate without Sub-Clients
+            •Link Clients to Sessions and Mileage?
+            •Track Client/Account Contact info
+
+        ~Entry
+            •Single form, Datasheet for sub-clients?
+            •Single form with separate form and designator for sub-clients
+
+    -Session Tracking
+        ~Must be able to:
+            •Manually track session lengths
+            •Clock in and out of sessions?
+                →For automatic time tracking
+            •Keep notes from sessions
+            •Output notes to .txt, .pdf, word doc, or other report?
+                →Printable?
+                →Customizable?
+
+DB Needs
+    -Mileage
+        ~May be part of the session page?
+        ~May be linked to sessions?
+        ~Field for Mileage?
+        ~Field for Session linkage?

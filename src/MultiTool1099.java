@@ -1,38 +1,31 @@
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by Eric on 5/28/2016.
  */
-public class MultiTool1099 {
+public class MultiTool1099 extends JPanel {
 
-    public static void main (String[] args){
+    public MultiTool1099 (){
 
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        SwingUtilities.invokeLater(() -> createAndShowGui());
     }
 
     private static void createAndShowGui(){
-        JFrame frame = new JFrame("MultiTool 1099");
+        //Sets up window
+        JFrame frame = new JFrame("Multi-Tool 1099");
+        //Sets ability to close the window
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        MultiTool1099 multiTool1099 = new MultiTool1099();
-        multiTool1099.addComponentToPane(frame.getContentPane());
+        //Add Components to window
+        frame.add(new MultiTool1099(), BorderLayout.CENTER);
 
+        //Displays Window
         frame.pack();
         frame.setVisible(true);
+
     }
 
-    private
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> createAndShowGui());
+    }
 }
-
