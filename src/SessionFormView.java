@@ -35,6 +35,18 @@ public class SessionFormView extends JPanel {
             checkInTimeField.setDateTime(LocalDateTime.now());
             checkInTimeField.setText(checkInTimeField.toHourlyString());
         });
+
+        //Check-out Time Displays Setup
+        JLabel checkOutTimeLabel = new JLabel("Check-out Time: ");
+        TimeField checkOutTimeField = new TimeField();
+        checkOutTimeField.setEditable(false);
+
+        //Check-out time Button Setup
+        JButton checkOutTimeButton = new JButton("Check-out");
+        checkOutTimeButton.addActionListener((ActionEvent e) -> {
+            checkOutTimeField.setDateTime(LocalDateTime.now());
+            checkOutTimeField.setText(checkOutTimeField.toHourlyString());
+        });
     }
 
 }
