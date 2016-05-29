@@ -1,0 +1,48 @@
+Functionality
+    -Miles Tracking
+    -Invoice Tracking
+    -Clients/Accounts
+        ~Sub-Clients
+    -Session Tracking + Note Taking
+        ~Scheduling?
+
+Execution
+    -Main Page
+        ~Tabbed Pane
+            •Tabs on left
+            •File/Edit Menu Bar?
+
+    -Miles Tracking
+        ~Must be able to:
+            •Add mileage entries by date
+            •Summarize mileage
+                →annually at a minimum
+
+        ~Entry Possibilities
+            •Single Entry Style Form
+            •Continuous Entry Style Form
+            •Datasheet Style Form
+
+        ~Summary Possibilities
+            •Unrestricted query of dates
+                →Query just dates
+                →Query dates by Client?
+
+            •Cross-Tab Style:
+                →Columns = Months
+                →Column after Dec = Annual Total
+                →Fixed bottom row = Column Totals
+                →Filter by Client?
+
+    -Invoicing
+        ~Must be able to:
+            •Track invoices by number
+            •Enter invoices manually
+            •Create invoices based on Sessions + Clients/Sub-Clients
+            •Denote unsent, sent, and paid invoices
+            •Print/Email Invoices?
+            •Customize Invoice Report?
+
+        ~Entry
+            •Single Form View
+            •
