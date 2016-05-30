@@ -3,6 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.time.LocalDateTime;
 
+
+/* Looks good on a 400 x 300 panel.
+ Sizes may have to be adjusted when it's put in to the
+      Split Panes view.
+  */
+
 /**
  * Created by Eric on 5/29/2016.
  */
