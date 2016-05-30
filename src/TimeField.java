@@ -5,18 +5,17 @@ import java.time.LocalDateTime;
  * Created by Eric on 5/29/2016.
  */
 public class TimeField extends JTextField {
-    LocalDateTime dateTime;
+    private LocalDateTime dateTime;
 
-    public TimeField (){
-
+    public TimeField() {
     }
 
-    public TimeField (LocalDateTime dateTime){
-        this.dateTime = dateTime;
+    public TimeField(int col) {
+        this.setColumns(col);
     }
 
     public String toHourlyString() {
-        return dateTime.getHour() + ":" + dateTime.getMinute();
+        return dateTime.format(MultiTool1099.dtf1);
     }
 
     public LocalDateTime getDateTime() {
@@ -25,5 +24,6 @@ public class TimeField extends JTextField {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+        this.setText(this.toHourlyString());
     }
 }
