@@ -26,7 +26,7 @@ public class DurationField extends JTextField {
     }
 
     public String toHourlyString() {
-        return this.totalTime.toHours() + " Hours, " + (this.totalTime.toMinutes() - (this.totalTime.toHours() * 60)) + "Minutes";
+        return this.totalTime.toHours() + " Hours, " + (this.totalTime.toMinutes() - (this.totalTime.toHours() * 60)) + " Minutes";
     }
 
     public void findSetTotalTime(Temporal start, Temporal end) {

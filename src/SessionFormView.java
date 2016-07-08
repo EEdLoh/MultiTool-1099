@@ -1,3 +1,6 @@
+import com.inet.jortho.FileUserDictionary;
+import com.inet.jortho.SpellChecker;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -62,7 +65,18 @@ public class SessionFormView extends JPanel {
 
         //Notes Component Setup
         JLabel notesLabel = new JLabel("Notes");
+
         JTextArea notesTextArea = new JTextArea();
+        notesTextArea.setLineWrap(true);
+        notesTextArea.setWrapStyleWord(true);
+
+        JScrollPane notesScrollPane = new JScrollPane(notesTextArea);
+
+        String userDictPath = "/Dictionaries/";
+        SpellChecker.setUserDictionaryProvider(new FileUserDictionary(userDictPath));
+        SpellChecker.registerDictionaries(getClass().getResource(userDictPath), "en");
+
+        SpellChecker.register(notesTextArea);
 
         setLayout(new GridBagLayout());
 
@@ -151,7 +165,7 @@ public class SessionFormView extends JPanel {
         gcon.gridy = 5;
         gcon.gridwidth = 3;
         gcon.weighty = 5;
-        add(notesTextArea, gcon);
+        add(notesScrollPane, gcon);
     }
 
 }
