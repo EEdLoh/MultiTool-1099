@@ -12,6 +12,7 @@ Execution
     -Main Page
         ~Tabbed Pane
             •Tabs on left
+            •SplitPanes view for most data
             •File/Edit Menu Bar?
 
     -Miles Tracking
@@ -65,6 +66,7 @@ Execution
             •Operate without Sub-Clients
             •Link Clients to Sessions and Mileage?
             •Track Client/Account Contact info
+            •Have different activities for the same client
 
         ~Entry
             •Single form, Datasheet for sub-clients?

@@ -33,6 +33,14 @@ public class SessionFormView extends JPanel {
         JComboBox clientSelectionDropdown = new JComboBox(clientList);
         clientSelectionDropdown.setSelectedIndex(-1);
 
+        //Activities Setup
+        JLabel activitiesLabel = new JLabel("Activity");
+        //String here for testing
+        //To be replaced by a function that finds and builds a keyed list from the db
+        String[] activityList = {"Recreation", "Aquatic"};
+        JComboBox activitySelectionDropdown = new JComboBox(activityList);
+        activitySelectionDropdown.setSelectedIndex(-1);
+
         //Total Time Component setup
         JLabel totalTimeLabel = new JLabel("Session Time: ");
         DurationField totalTimeField = new DurationField(15);
@@ -92,19 +100,23 @@ public class SessionFormView extends JPanel {
         gcon.gridy = 0;
         add(clientSelectionLabel, gcon);
 
-        //Check-in Label
         gcon.gridx = 0;
         gcon.gridy = 1;
+        add(activitiesLabel, gcon);
+
+        //Check-in Label
+        gcon.gridx = 0;
+        gcon.gridy = 2;
         add(checkInTimeLabel, gcon);
 
         //Check-out Label
         gcon.gridx = 0;
-        gcon.gridy = 2;
+        gcon.gridy = 3;
         add(checkOutTimeLabel, gcon);
 
         //Total Time Label
         gcon.gridx = 0;
-        gcon.gridy = 3;
+        gcon.gridy = 4;
         add(totalTimeLabel, gcon);
 
         ///// Second Column /////
@@ -114,17 +126,17 @@ public class SessionFormView extends JPanel {
         gcon.anchor = GridBagConstraints.LINE_START;
         gcon.weightx = 3;
         gcon.gridx = 1;
-        gcon.gridy = 1;
+        gcon.gridy = 2;
         add(checkInTimeField, gcon);
 
         //Check-out Fiend
         gcon.gridx = 1;
-        gcon.gridy = 2;
+        gcon.gridy = 3;
         add(checkOutTimeField, gcon);
 
         //Total Time Field
         gcon.gridx = 1;
-        gcon.gridy = 3;
+        gcon.gridy = 4;
         add(totalTimeField, gcon);
 
         ///// Third Column /////
@@ -132,37 +144,44 @@ public class SessionFormView extends JPanel {
         //Check-in Button
         gcon.weightx = 2;
         gcon.gridx = 2;
-        gcon.gridy = 1;
+        gcon.gridy = 2;
         add(checkInButton, gcon);
 
         //Check-out Button
         gcon.gridx = 2;
-        gcon.gridy = 2;
+        gcon.gridy = 3;
         add(checkOutTimeButton, gcon);
 
         //Caclulate button
         gcon.gridx = 2;
-        gcon.gridy = 3;
+        gcon.gridy = 4;
         add(calcTimeButton, gcon);
 
-        //Dropdown
+        ///// Dropdowns /////
+
+        //Client Dropdown
         gcon.gridwidth = 2;
         gcon.gridx = 1;
         gcon.gridy = 0;
         add(clientSelectionDropdown, gcon);
+
+        //Activity Dropdown
+        gcon.gridx = 1;
+        gcon.gridy = 1;
+        add(activitySelectionDropdown, gcon);
 
         ///// Notes Bits /////
 
         //Notes Label
         gcon.anchor = GridBagConstraints.LAST_LINE_START;
         gcon.gridx = 0;
-        gcon.gridy = 4;
+        gcon.gridy = 5;
         add(notesLabel, gcon);
 
         //Notes Area
         gcon.fill = GridBagConstraints.BOTH;
         gcon.gridx = 0;
-        gcon.gridy = 5;
+        gcon.gridy = 6;
         gcon.gridwidth = 3;
         gcon.weighty = 5;
         add(notesScrollPane, gcon);
