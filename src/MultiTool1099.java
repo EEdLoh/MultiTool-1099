@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.text.DateFormatter;
 import java.awt.*;
 import java.time.format.DateTimeFormatter;
 
@@ -7,7 +8,8 @@ import java.time.format.DateTimeFormatter;
  */
 public class MultiTool1099 extends JPanel {
 
-    public static DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("eee',' MMM d',' yyyy 'at' HH:mm");
+    public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("eee',' MMM d',' yyyy 'at' HH:mm");
+    public static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("eee',' MMM d',' yyyy");
 
     public MultiTool1099() {
 

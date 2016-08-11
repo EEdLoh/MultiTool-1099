@@ -47,7 +47,7 @@ public class SessionFormView extends JPanel {
 
         //Check-in Time Displays Setup
         JLabel checkInTimeLabel = new JLabel("Check-in Time: ");
-        TimeField checkInTimeField = new TimeField(15);
+        DateTimeField checkInTimeField = new DateTimeField(15);
 
         //Check-in Time Button setup
         JButton checkInButton = new JButton("Check-in");
@@ -57,7 +57,7 @@ public class SessionFormView extends JPanel {
 
         //Check-out Time Displays Setup
         JLabel checkOutTimeLabel = new JLabel("Check-out Time: ");
-        TimeField checkOutTimeField = new TimeField(15);
+        DateTimeField checkOutTimeField = new DateTimeField(15);
 
         //Check-out time Button Setup
         JButton checkOutTimeButton = new JButton("Check-out");
@@ -129,7 +129,7 @@ public class SessionFormView extends JPanel {
         gcon.gridy = 2;
         add(checkInTimeField, gcon);
 
-        //Check-out Fiend
+        //Check-out Field
         gcon.gridx = 1;
         gcon.gridy = 3;
         add(checkOutTimeField, gcon);

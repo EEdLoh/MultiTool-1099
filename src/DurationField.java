@@ -19,7 +19,7 @@ public class DurationField extends JTextField {
         this.totalTime = totalTime;
     }
 
-    public void checkCalculatable(TimeField start, TimeField end) {
+    public void checkCalculatable(DateTimeField start, DateTimeField end) {
         if (start.getDateTime() != null && end.getDateTime() != null) {
             this.findSetTotalTime(start.getDateTime(), end.getDateTime());
         }
